@@ -2,27 +2,17 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>NAME HERE'S Projects</title>
+        <title>Projects | Tech Marketing Portal</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/nav.css">
         <link rel="stylesheet" href="css/animated-star.css">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌟</text></svg>">
-        <style>
-        /* start google font style */
-        h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem; /* Needs to be larger because it's a condensed font */
-            color: #0f172a;
-            letter-spacing: 1.5px; /* Spaces out the all-caps look nicely */
-        }
-        /* end google font style */
-        </style>
     </head>
     <body>
         <header>
             <h1>
-                <span class="animated-star" aria-label="Achiever Star">🌟</span> YOUR NAME HERE
+                <span class="animated-star" aria-label="Achiever Star"></span> Lourdes
             </h1>
             <nav class="topnav" id="myTopnav">
                 <a href="index.html">Bio</a>
@@ -32,72 +22,62 @@
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </nav>
         </header>
+        
         <main class="wrapper">
             <section class="projects-container">
-                <h2 class="subheader">Projects</h2>
-                <p class="subtitle">A gallery of what I've been working on.</p>
+                <h2 class="subheader">Featured Projects</h2>
+                <p class="subtitle" style="margin-left: 1em; color: var(--text-muted);">A portfolio bridging high-level marketing analytics with technical infrastructure.</p>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/shakespeare-bust.jpg" alt="Shakespeare bust">
+                        <img src="images/daily-grind.png" alt="Image of LargeBuck$ Coffee dynamic menu application">
                     </div>
                     <div class="project-content">
-                        <h2>AJAX Random Quotes Engine</h2>
-                        <p>A dynamic quote generator that pulls attitudinal statements asynchronously from a PHP server. Features custom Google Fonts styling, smooth CSS transitions, and cache-busting mechanics to ensure seamless quote updates.</p>
-                        
+                        <h3>LargeBuck$ Coffee: Dynamic Daily Specials Interface</h3>
+                        <p>A dynamic web application that displays localized daily coffee specials using advanced JavaScript object data stores and DOM manipulation methods. The application reads user interactions and URL query strings via the <code>URLSearchParams()</code> object to seamlessly update content, color themes, and imagery on a single, highly optimized page template.</p>
                         <div class="project-links">
-                        <a href="#" class="btn demo-btn" target="_blank">Live Demo</a>
-                        <a href="#" class="btn repo-btn" target="_blank">GitHub Repo</a>
+                            <a href="https://lourdesy.github.io/daily-grind/" class="btn demo-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Lourdesy/daily-grind" class="btn repo-btn" target="_blank">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+                        
+
+               <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/hamlet-play.webp" alt="Theater background for the Hamlet DOM Play assignment">
+                    </div>
+                    <div class="project-content">
+                        <h3>DOM Play: Interactive Script Rehearsal Application</h3>
+                        <p>A dynamic web interface engineered for actors rehearsing Shakespeare's Hamlet. Built using JavaScript and DOM manipulation, the application detects user clicks on individual dialogue lines to dynamically highlight all text spoken by that specific character while seamlessly dimming the rest of the script to improve rehearsal focus.</p>
+                        <div class="project-links">
+                            <a href="https://lourdesy.github.io/dom-play/" class="btn demo-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Lourdesy/dom-play" class="btn repo-btn" target="_blank">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://picsum.photos/150" alt="Future Lab Screenshot">
+                        <img src="images/time-of-the-day.png" alt="Captura de pantalla de la aplicación web Time of the Day">
                     </div>
                     <div class="project-content">
-                        <h2>Upcoming Assignment Template</h2>
-                        <p>This is a placeholder for your next project card. You can easily 
-                            duplicate the entire 'project-card' block to list as many projects as you wish.
-                        </p>
-                        
+                        <h3>Dynamic Time of Day Application</h3>
+                        <p>An interactive web application built with JavaScript that responds dynamically based on the user's local time of day. This project demonstrates core proficiency in DOM manipulation, front-end logic, and adaptive design to elevate user experience (UX) through personalized, organic interfaces.</p>
                         <div class="project-links">
-                            <a href="#" class="btn demo-btn" target="_blank">Live Demo</a>
-                            <a href="#" class="btn repo-btn" target="_blank">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://loremflickr.com/g/150/150/outdoors" alt="Future Lab Screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h2>Upcoming Assignment Template</h2>
-                        <p>This is a placeholder for yet a third project. 
-                           Note how the image automatically switches from side to side due to the magic of nth child!
-                        </p>
-                        
-                        <div class="project-links">
-                            <a href="#" class="btn demo-btn" target="_blank">Live Demo</a>
-                            <a href="#" class="btn repo-btn" target="_blank">GitHub Repo</a>
+                            <a href="https://lourdesy.github.io/time-of-day/" class="btn demo-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Lourdesy/time-of-day" class="btn repo-btn" target="_blank">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <p><i>Bill's Advice: Take time to explain clearly and perfectly what's going on, 
-                how things work, what you've learned, and try to do so succinctly.  When employers see
-            what we've internalized, they imagine we can act as a valuable resource to them. 
-            We are selling our skills as a resource and asset, and the better job we do articulating this,
-        the more easily an employer can see our value.</i></p>
-        <p><i>It may be MORE important to be able to clearly explain things over actually knowing them!
-            At least if I can explain myself, I'm showing I can adapt in a dynamic manner, and if I know things but 
-            can't explain myself, no one will know what I can do.
-        </i></p>
+
+            <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 40px 1.5em 20px 1.5em;">
+
+            <p><i><b>Strategic Takeaway:</b> By combining technical tools like HTML, CSS, JavaScript, and repository architectures with global market positioning, I focus on building high-impact platforms that optimize business performance. True value lies in translating technical mechanics into scalable corporate assets.</i></p>
+            
             <footer>
-                <p><small>&copy; 2025-<span id="this-year"></span> by 
-                    YOUR NAME HERE, All Rights Reserved ~ 
+                <p><small>&copy; 2025-<span id="this-year"></span> by Lourdes, All Rights Reserved ~ 
                     <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
                     <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
                 </p>

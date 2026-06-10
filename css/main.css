@@ -1,62 +1,101 @@
-/* Global rules */
+:root {
+    /* Tu base limpia, espaciosa y clara original */
+    --bg-base: #F8FAFC;          
+    --bg-card: #FFFFFF;          
+    --text-main: #1E293B;        /* Charcoal suave para la lectura */
+    --text-muted: #64748B;       
+
+    /* NUEVO ESQUEMA "TEAL DIGITAL" */
+    --primary-brand: #0F766E;    /* Deep Teal (Fuerza y presencia en tu nombre) */
+    --accent-brand: #0D9488;     /* Vibrant Teal (Creatividad unificada para subtítulos) */
+    --trigger-brand: #06B6D4;    /* Electric Cyan (Detalle tecnológico interactivo) */
+}
 
 html {
-    background-color: whitesmoke;
+    background-color: var(--bg-base);
     font-size: 0.95em;
 }
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--bg-base);
+    color: var(--text-main);
     margin: 0 auto;
     padding: 20px;
-    max-width:1200px;
-  }
+    max-width: 1200px;
+}
 
 ::selection {
-    color: #000; 
-    background: #ff0;
+    color: #FFFFFF; 
+    background: var(--accent-brand);
 }
 
 h1 {
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: normal;
+    font-size: 3.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     margin: auto;
-    background: #fff;
-    line-height: 2.5em;
+    background: transparent;
+    line-height: 1.5em;
+    padding: 20px 0;
+    color: var(--primary-brand); /* Tu nombre en Turquesa Profundo */
 }
 
 main.wrapper {
-    background-color: white;
+    background-color: var(--bg-card);
     overflow: auto;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
 }
 
 p {
-    margin: 1em; /* Top Right Bottom Left (TRBL) */
+    margin: 1em; 
 }
 
-h2,h3 {
+h2, h3 {
     font-weight: normal;
     margin-left: 1em;
     line-height: 1em;
+    color: var(--accent-brand); /* Subtítulos ("About Me") en Turquesa Enérgico */
 }
 
 a {
-    color:darkcyan;
+    color: var(--accent-brand); /* Enlaces de texto en Turquesa */
     text-decoration: none;
 }
 
 a:hover {
-    color: whitesmoke;
-    background-color: darkcyan;
-    text-decoration: none;
+    color: var(--trigger-brand);  /* Cambia al vibrante Cian Eléctrico al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Botones Principales en las tarjetas de proyectos */
+.demo-btn {
+    background-color: var(--primary-brand) !important;
+    color: #FFFFFF !important;
+}
+  
+.demo-btn:hover {
+    background-color: var(--accent-brand) !important; /* El botón se ilumina en Carmesí */
+    color: #FFFFFF !important;
 }
 
 footer {
     clear: both;
     text-align: center;
-    padding: 1em;
+    padding: 2em;
+    color: var(--text-muted);
+}
+
+footer a {
+    color: var(--text-muted);
+}
+
+footer a:hover {
+    color: var(--secondary-brand);
 }
 
 /* end global rules */
@@ -68,6 +107,7 @@ footer {
     main.wrapper {
         width: 80%;
         margin: auto;
+        padding: 30px;
     }
     
     h1 {
@@ -76,11 +116,12 @@ footer {
     }
     
     picture.profile img {
-        width: 50%;
+        width: 45%;
         float: left;
-        margin-right: 2em;
+        margin: 1.5em 2em 1.5em 1.5em;
+        border-radius: 6px;
+        border: 1px solid #E2E8F0;
     }
-    
 }
 
 /* TABLET */
@@ -88,6 +129,7 @@ footer {
     main.wrapper {
         width: 90%;
         margin: auto;
+        padding: 20px;
     }
     
     h1 {
@@ -96,28 +138,32 @@ footer {
     }
     
     picture.profile img {
-        width: 50%;
+        width: 45%;
         float: right;
-        margin-left: 1em;
+        margin: 1.5em 1.5em 1.5em 2em;
+        border-radius: 6px;
+        border: 1px solid #E2E8F0;
     }
-
 }
 
 /* PHONE */
 @media all and (max-width:500px) {
     main.wrapper {
         width: 100%;
+        padding: 10px;
     }
     
     h1 {
         width: 99%;
         padding-left: 1%;
+        font-size: 2.5rem;
     }
     
     picture.profile img {
         width: 100%;
+        border-radius: 4px;
+        margin-bottom: 1em;
     }
-    
 }
 
 /* start project container rules */
@@ -131,97 +177,101 @@ footer {
   /* The Main Project Card Wrapper */
   .project-card {
     display: flex;
-    flex-direction: row; /* Default layout: Image left, text right */
+    flex-direction: row;
     align-items: center;
     gap: 30px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px; /* Smooth rounded corners */
+    background: var(--bg-card);
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
     padding: 24px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
-  }
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
   
   .project-card:hover {
-    transform: translateY(-2px); /* Subtle interaction cue */
-  }
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+}
   
   /* The Magic Mirror: Automatically alternate left/right layout */
   .project-card:nth-child(even) {
-    flex-direction: row-reverse; /* Flips the order for every second card */
-  }
+    flex-direction: row-reverse;
+}
   
   /* Image Control Group */
   .project-image {
-    flex-shrink: 0; /* Prevents text from squeezing the image container */
-  }
+    flex-shrink: 0;
+}
   
   .project-image img {
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Forces screenshots to crop nicely instead of squishing */
+    object-fit: cover;
     border-radius: 8px;
-    border: 1px solid #cbd5e1;
-  }
+    border: 1px solid #E2E8F0;
+}
   
   /* Content & CTA Link Elements */
   .project-content {
     flex-grow: 1;
-  }
+}
   
   .project-content h2 {
     margin-top: 0;
-    color: #1e293b;
-  }
+    margin-left: 0;
+    color: var(--primary-brand); /* Stronger authority color for project titles */
+}
   
   .project-links {
     margin-top: 20px;
     display: flex;
     gap: 12px;
-  }
+}
   
   /* Flexible, clean Button styles */
   .btn {
     display: inline-block;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: background-color 0.2s;
-  }
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
   
-  .demo-btn {
-    background-color: darkcyan;
-    color: #ffffff;
-  }
+.demo-btn {
+    background-color: var(--primary-brand);
+    color: #FFFFFF;
+}
   
-  .demo-btn:hover {
-    background-color: rgb(95, 95, 95);
-  }
+.demo-btn:hover {
+    background-color: var(--accent-trigger);
+    color: var(--primary-brand);
+}
   
   .repo-btn {
-    background-color: #f1f5f9;
-    color: #334155;
-    border: 1px solid #cbd5e1;
-  }
+    background-color: #FFFFFF;
+    color: var(--text-main);
+    border: 1px solid #E2E8F0;
+}
   
-  .repo-btn:hover {
-    background-color: rgb(95, 95, 95);
-  }
+.repo-btn:hover {
+    background-color: var(--bg-base);
+    border-color: var(--text-muted);
+}
   
   /* Responsive Overrides: If screen is small, stack everything vertically */
   @media (max-width: 650px) {
     .project-card, 
     .project-card:nth-child(even) {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
     
     .project-links {
-      justify-content: center;
+        justify-content: center;
     }
-  }
+}
 
 /* end project container rules */
