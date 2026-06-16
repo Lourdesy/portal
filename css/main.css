@@ -90,6 +90,7 @@ footer {
         width: 50%;
         float: left;
         margin-right: 2em;
+        margin-top: 1.5em;
     }
     
 }
@@ -110,6 +111,7 @@ footer {
         width: 50%;
         float: right;
         margin-left: 1em;
+        margin-top: 1.5em;
     }
 
 }
@@ -127,6 +129,7 @@ footer {
     
     picture.profile img {
         width: 100%;
+        margin-top: 1em;
     }
     
 }
@@ -203,11 +206,12 @@ footer {
     letter-spacing: 0.05em;    
     text-transform: uppercase; 
     font-size: 0.75rem;        
-    
-    /* THE FIX: Re-enforcing your original vertical/horizontal padding and display */
     display: inline-block;
-    padding: 8px 16px;         /* This opens the button back up vertically */
-    line-height: 1.2;          /* Centers the new uppercase text perfectly inside the box */
+    padding: 8px 16px;         
+    line-height: 1.2;          
+    
+    /* THE FIX: Restoring your beautiful circular corners */
+    border-radius: 6px;        /* Smooth, elegant rounded edges */
 }
   
 .demo-btn {
