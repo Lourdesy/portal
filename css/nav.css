@@ -1,15 +1,16 @@
+/* Update these top rules in your nav.css */
+
 .topnav {
     margin: auto;
-    background-color: #155E75;          /* Barra sólida en Deep Teal (Fuerza y presencia) */
+    background-color: #1E293B;          /* Polished Navy/Charcoal Slate Background */
     overflow: auto;
-    border-bottom: 4px solid #B45309;   /* Línea base en Ámbar Cálido */
-    border-radius: 6px 6px 0 0;
+    border-bottom: 4px solid #B45309;   /* Pure Golden Amber Thin Line Underneath */
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: #E2E8F0;                     /* Texto inactivo en un gris platino muy claro y legible */
+    color: #E2E8F0;                     /* Crisp Platinum Silver text for clear navigation */
     text-align: center;
     padding: 12px 12px;
     text-decoration: none;
@@ -17,41 +18,20 @@
     font-size: 16px;
 }
 
-/* Al pasar el mouse, el texto cambia al Ámbar de forma muy elegante, sin mover el fondo */
+/* Hover state: Background drops to dark teal, text turns gold */
 .topnav a:hover {
-    color: #B45309 !important;
-    background-color: #0E4E60 !important; /* Un tono sutilmente más denso al interactuar */
-    text-decoration: none;
+    background-color: #0F172A !important; /* Midnight black background shift */
+    color: #F59E0B !important;            /* Glowing Warm Gold text on hover */
 }
 
-/* Enlace Activo (Página Actual) */
-.topnav a.active, .active {
-    background-color: #0E4E60 !important; /* Fondo de pestaña destacado */
-    color: #FFFFFF !important;            /* Texto blanco nítido */
-    font-weight: bold;
+/* Active state tab style */
+.topnav a.hover, .active {
+    background-color: #0F172A !important; /* Marks the active page tab cleanly */
+    color: #FFFFFF !important;
 }
 
-.topnav .icon {
-    display: none;
-}
+/* Responsive rules - apply when screen width is less than 1200px */
 
-/* Responsive rules - Copiadas exactamente de tu archivo original */
-@media screen and (max-width: 1199px) {
-    .topnav a:not(:first-child) { display: none; }
-    .topnav a.icon { float: right; display: block; }
-    .topnav.responsive { position: relative; }
-    .topnav.responsive a { float: none; display: block; text-align: left; }
-    .topnav.responsive a.icon { position: absolute; right: 0; top: 0; }
-}
-
-@media all and (min-width:1200px) { .topnav { width: 80%; } }
-@media all and (min-width:501px) and (max-width:1199px) { .topnav { width: 90%; } }
-@media all and (max-width:500px) { .topnav { width: 100%; } }
-/* ==========================================================================
-   Responsive Rules - Preserving Your Professor's Layout Requirements
-   ========================================================================== */
-
-/* Mobile Navigation Trigger Logic */
 @media screen and (max-width: 1199px) {
     .topnav a:not(:first-child) {
         display: none;
@@ -70,43 +50,31 @@
         float: none;
         display: block;
         text-align: left;
-        border-bottom: none;
-        border-left: 3px solid transparent;
-    }
-    
-    /* Alternating side accents for responsive vertical mobile layout */
-    .topnav.responsive a.active {
-        border-left: 3px solid #9A3412;
-    }
-    
-    .topnav.responsive a:hover {
-        border-left: 3px solid #06B6D4;
-        background-color: #F8FAFC;
     }
     
     .topnav.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
-        border: none;
     }
 }
 
-/* DESKTOP WIDTH ALIGNMENT */
+
+/* DESKTOP */
 @media all and (min-width:1200px) {
     .topnav {
         width: 80%;
     }
 }
 
-/* TABLET WIDTH ALIGNMENT */
+/* TABLET */
 @media all and (min-width:501px) and (max-width:1199px) {
     .topnav {
         width: 90%;
     }
 }
 
-/* PHONE WIDTH ALIGNMENT */
+/* PHONE */
 @media all and (max-width:500px) {
     .topnav {
         width: 100%;

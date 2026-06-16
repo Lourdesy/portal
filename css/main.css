@@ -1,26 +1,17 @@
-:root {
-    /* Tu base limpia, espaciosa y clara original */
-    --bg-base: #F8FAFC;          
-    --bg-card: #FFFFFF;          
-    --text-main: #1E293B;        /* Charcoal suave para la lectura */
-    --text-muted: #64748B;       
-
-    /* NUEVO ESQUEMA "TEAL DIGITAL" */
-    --primary-brand: #0F766E;    /* Deep Teal (Fuerza y presencia en tu nombre) */
-    --accent-brand: #0D9488;     /* Vibrant Teal (Creatividad unificada para subtítulos) */
-    --trigger-brand: #06B6D4;    /* Electric Cyan (Detalle tecnológico interactivo) */
-}
+/* Global rules */
 
 html {
-    background-color: var(--bg-base);
+    background-color: whitesmoke;
     font-size: 0.95em;
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    background-color: var(--bg-base);
-    color: var(--text-main);
+   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.75;
+    font-size: 1rem;
+    letter-spacing: -0.011em;  /* Premium optical tracking tweak for digital screens */
+    background-color: #f9f9f9;
+   color: #333333;
     margin: 0 auto;
     padding: 20px;
     max-width: 1200px;
@@ -28,74 +19,55 @@ body {
 
 ::selection {
     color: #FFFFFF; 
-    background: var(--accent-brand);
+    background: #C2410C;                /* Rich Terracotta Orange when text is highlighted */
 }
 
 h1 {
-    font-family: 'Bebas Neue', sans-serif;
     font-weight: normal;
-    font-size: 3.5rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
     margin: auto;
-    background: transparent;
-    line-height: 1.5em;
-    padding: 20px 0;
-    color: var(--primary-brand); /* Tu nombre en Turquesa Profundo */
+    background: #fff;
+    line-height: 2.5em;
+    color: #0F766E;                     /* Deep Teal for your main Name title */
 }
 
 main.wrapper {
-    background-color: var(--bg-card);
+    background-color: white;
     overflow: auto;
-    border-radius: 8px;
-    border: 1px solid #E2E8F0;
 }
 
 p {
+    font-size: 1.05rem;        
+    font-weight: 400;          
+    color: #334155;            /* Crisp slate-charcoal for optimal reading contrast */
     margin: 1em; 
 }
 
 h2, h3 {
-    font-weight: normal;
+    /* Montserrat is a geometric sans-serif that screams modern branding and marketing */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;          /* Polished, professional semibold weight */
+    font-size: 1.65rem;        
+    letter-spacing: -0.02em;   /* Sleek, tight modern tracking */
     margin-left: 1em;
-    line-height: 1em;
-    color: var(--accent-brand); /* Subtítulos ("About Me") en Turquesa Enérgico */
+    line-height: 1.3em;
+    color: #451A03;            /* Kept your elegant Espresso Brown */
 }
 
 a {
-    color: var(--accent-brand); /* Enlaces de texto en Turquesa */
+    color: #0284C7;                     /* Tailored Executive Blue for inline links */
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--trigger-brand);  /* Cambia al vibrante Cian Eléctrico al pasar el mouse */
+    color: #0369A1;                     /* Darker professional blue on link hover */
+    background-color: transparent;      
     text-decoration: underline;
-}
-
-/* Botones Principales en las tarjetas de proyectos */
-.demo-btn {
-    background-color: var(--primary-brand) !important;
-    color: #FFFFFF !important;
-}
-  
-.demo-btn:hover {
-    background-color: var(--accent-brand) !important; /* El botón se ilumina en Carmesí */
-    color: #FFFFFF !important;
 }
 
 footer {
     clear: both;
     text-align: center;
-    padding: 2em;
-    color: var(--text-muted);
-}
-
-footer a {
-    color: var(--text-muted);
-}
-
-footer a:hover {
-    color: var(--secondary-brand);
+    padding: 1em;
 }
 
 /* end global rules */
@@ -107,7 +79,6 @@ footer a:hover {
     main.wrapper {
         width: 80%;
         margin: auto;
-        padding: 30px;
     }
     
     h1 {
@@ -116,12 +87,11 @@ footer a:hover {
     }
     
     picture.profile img {
-        width: 45%;
+        width: 50%;
         float: left;
-        margin: 1.5em 2em 1.5em 1.5em;
-        border-radius: 6px;
-        border: 1px solid #E2E8F0;
+        margin-right: 2em;
     }
+    
 }
 
 /* TABLET */
@@ -129,7 +99,6 @@ footer a:hover {
     main.wrapper {
         width: 90%;
         margin: auto;
-        padding: 20px;
     }
     
     h1 {
@@ -138,32 +107,28 @@ footer a:hover {
     }
     
     picture.profile img {
-        width: 45%;
+        width: 50%;
         float: right;
-        margin: 1.5em 1.5em 1.5em 2em;
-        border-radius: 6px;
-        border: 1px solid #E2E8F0;
+        margin-left: 1em;
     }
+
 }
 
 /* PHONE */
 @media all and (max-width:500px) {
     main.wrapper {
         width: 100%;
-        padding: 10px;
     }
     
     h1 {
         width: 99%;
         padding-left: 1%;
-        font-size: 2.5rem;
     }
     
     picture.profile img {
         width: 100%;
-        border-radius: 4px;
-        margin-bottom: 1em;
     }
+    
 }
 
 /* start project container rules */
@@ -177,101 +142,107 @@ footer a:hover {
   /* The Main Project Card Wrapper */
   .project-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Default layout: Image left, text right */
     align-items: center;
     gap: 30px;
-    background: var(--bg-card);
-    border: 1px solid #E2E8F0;
-    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px; /* Smooth rounded corners */
     padding: 24px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
   
   .project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
-}
+    transform: translateY(-2px); /* Subtle interaction cue */
+  }
   
   /* The Magic Mirror: Automatically alternate left/right layout */
   .project-card:nth-child(even) {
-    flex-direction: row-reverse;
-}
+    flex-direction: row-reverse; /* Flips the order for every second card */
+  }
   
   /* Image Control Group */
   .project-image {
-    flex-shrink: 0;
-}
+    flex-shrink: 0; /* Prevents text from squeezing the image container */
+  }
   
   .project-image img {
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    object-fit: cover; /* Forces screenshots to crop nicely instead of squishing */
     border-radius: 8px;
-    border: 1px solid #E2E8F0;
-}
+    border: 1px solid #cbd5e1;
+  }
   
   /* Content & CTA Link Elements */
   .project-content {
     flex-grow: 1;
-}
+  }
   
-  .project-content h2 {
+ .project-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;        /* Perfectly balanced for project card titles */
+    font-weight: 700;          /* Bold weight makes your individual projects stand out */
+    letter-spacing: -0.01em;
     margin-top: 0;
-    margin-left: 0;
-    color: var(--primary-brand); /* Stronger authority color for project titles */
+    color: #0F172A;            /* Kept your Luxurious Dark Slate */
 }
   
   .project-links {
     margin-top: 20px;
     display: flex;
     gap: 12px;
-}
+  }
   
   /* Flexible, clean Button styles */
-  .btn {
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;          
+    letter-spacing: 0.05em;    
+    text-transform: uppercase; 
+    font-size: 0.75rem;        
+    
+    /* THE FIX: Re-enforcing your original vertical/horizontal padding and display */
     display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 8px 16px;         /* This opens the button back up vertically */
+    line-height: 1.2;          /* Centers the new uppercase text perfectly inside the box */
 }
   
 .demo-btn {
-    background-color: var(--primary-brand);
-    color: #FFFFFF;
+    background-color: #B45309;          /* Striking Warm Amber Gold - highly attractive and clickable */
+    color: #ffffff;
 }
   
 .demo-btn:hover {
-    background-color: var(--accent-trigger);
-    color: var(--primary-brand);
+    background-color: #92400E;          /* Deepens beautifully on hover */
+    color: #ffffff;
 }
   
   .repo-btn {
-    background-color: #FFFFFF;
-    color: var(--text-main);
-    border: 1px solid #E2E8F0;
-}
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+  }
   
 .repo-btn:hover {
-    background-color: var(--bg-base);
-    border-color: var(--text-muted);
+    background-color: #f1f5f9;
+    color: #B45309;                     /* GitHub code button gets a subtle gold accent on hover */
+    border-color: #B45309;
 }
   
   /* Responsive Overrides: If screen is small, stack everything vertically */
   @media (max-width: 650px) {
     .project-card, 
     .project-card:nth-child(even) {
-        flex-direction: column;
-        text-align: center;
+      flex-direction: column;
+      text-align: center;
     }
     
     .project-links {
-        justify-content: center;
+      justify-content: center;
     }
-}
+  }
 
 /* end project container rules */
