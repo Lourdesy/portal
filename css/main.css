@@ -25,9 +25,6 @@ body {
 h1 {
     font-weight: normal;
     margin: auto;
-    background: #fff;
-    line-height: 2.5em;
-    color: #0F766E;                     /* Deep Teal for your main Name title */
 }
 
 main.wrapper {
@@ -43,23 +40,27 @@ p {
 }
 
 h2, h3 {
-    /* Montserrat is a geometric sans-serif that screams modern branding and marketing */
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;          /* Polished, professional semibold weight */
+    font-weight: 600;         
     font-size: 1.65rem;        
-    letter-spacing: -0.02em;   /* Sleek, tight modern tracking */
+    letter-spacing: -0.02em;  
     margin-left: 1em;
     line-height: 1.3em;
-    color: #451A03;            /* Kept your elegant Espresso Brown */
+    color: #475569;         
+}
+
+.subtitle {
+    font-size: 1.15rem !important; 
+    line-height: 1.65 !important;  
 }
 
 a {
-    color: #0284C7;                     /* Tailored Executive Blue for inline links */
+    color: #0284C7;                    
     text-decoration: none;
 }
 
 a:hover {
-    color: #0369A1;                     /* Darker professional blue on link hover */
+    color: #0369A1;                     
     background-color: transparent;      
     text-decoration: underline;
 }
@@ -184,12 +185,13 @@ footer {
     flex-grow: 1;
   }
   
- .project-content h2 {
+ .project-content h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.35rem;        /* Perfectly balanced for project card titles */
     font-weight: 700;          /* Bold weight makes your individual projects stand out */
     letter-spacing: -0.01em;
     margin-top: 0;
+    margin-left: 0;
     color: #0F172A;            /* Kept your Luxurious Dark Slate */
 }
   
@@ -208,10 +210,8 @@ footer {
     font-size: 0.75rem;        
     display: inline-block;
     padding: 8px 16px;         
-    line-height: 1.2;          
-    
-    /* THE FIX: Restoring your beautiful circular corners */
-    border-radius: 6px;        /* Smooth, elegant rounded edges */
+    line-height: 1.2;  
+    border-radius: 6px;        
 }
   
 .demo-btn {
